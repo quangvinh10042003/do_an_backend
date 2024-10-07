@@ -1,0 +1,70 @@
+<%- include('../layout/header.html') %>
+<div class="col-9">
+  <div class="content">
+    <h2 class="text-center text-light fw-bold title">Category</h2>
+    <div class="mt-3">
+      <a
+        class="btn btn-info rounded-4 fs-6 px-5 py-3"
+        href="/admin/product/create"
+        role="button"
+        ><i class="fa-solid fa-plus"></i> Add Category</a
+      >
+    </div>
+    <% if (categories.length > 0) {%>
+    <div class="table-responsive mt-5">
+      <table class="table table-primary">
+        <thead>
+          <tr>
+            <th scope="col">Id</th>
+            <th scope="col">Name</th>
+            <th scope="col">Desciption</th>
+            <th scope="col" class="">Setting</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% categories.forEach((cate) => { %>
+          <tr class="">
+            <td scope="row"><%= cate.id %></td>
+            <td scope="row">
+              <img
+                src="<%= pro.image_url %>"
+                width="50px"
+                height="50px"
+                style="object-fit: cover; border-radius: 4px"
+                alt=""
+              />
+            </td>
+            <td scope="row"><%= cate.name %></td>
+            <td scope="row"><%= pro.description %></td>
+            <td scope="row">
+              <a
+                name=""
+                id=""
+                class="btn btn-success float-end"
+                href="#"
+                role="button"
+                >Update</a
+              >
+              <a
+                name=""
+                id=""
+                class="btn btn-danger float-end"
+                href="#"
+                role="button"
+                >Delete</a
+              >
+            </td>
+          </tr>
+          <% }) %>
+        </tbody>
+      </table>
+    </div>
+    <% } else { %>
+    <h4 class="text-left text-danger fst-italic">
+      <i class="fa-solid fa-empty"></i> Category list is Empty !
+    </h4>
+    <% } %>
+  </div>
+</div>
+
+<%- include('../layout/footer.html') %>

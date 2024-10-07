@@ -1,0 +1,19 @@
+<%- include('layout/header.html') %>
+<div class="col-9">
+  <div class="content">
+    <h2 class="text-center text-light fw-bold title">Home</h2>
+    <h1 class="text-center">Kết nối Nodejs tới CSDL Mysql</h1>
+    <h3>Sử dụng lệnh: "npm i --save mysql" để cài đặt</h3>
+    <h3>Login: <%= login.email %></h3>
+    <h3>Tạo ra file connect.js</h3>
+    <div class="table-responsive mt-5 rounded-3">
+      <a
+        class="btn btn-info rounded-4 fs-6 px-5 py-3"
+        href="/admin/product/create"
+        role="button"
+        ><i class="fa-solid fa-plus"></i> Add Product</a
+      >
+    </div>
+  </div>
+</div>
+<%- include('layout/footer.html') %>
